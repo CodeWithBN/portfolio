@@ -164,19 +164,38 @@ nav a:hover {
 }
 
 .hero-img img {
-  width: 390px; /* rectangle width */
-  height: 480px; /* rectangle height */
-  border-radius: 20px; /* soft rounded corners */
-  object-fit: cover; /* keeps image aspect */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* subtle shadow */
-  border: 2px solid var(--accent); /* optional accent border */
-  transition: transform 0.3s, box-shadow 0.3s;
+  width: 390px; 
+  height: 470px; 
+  border-radius: 20px; 
+  object-fit: cover; 
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); 
+  border: 2px solid var(--accent); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+
+  filter: brightness(0.85) contrast(1.05); 
 }
 
-.hero-img img:hover {
-  transform: translateY(-5px) scale(1.03); /* subtle lift */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* enhanced hover shadow */
+.hero-img {
+  position: relative;
 }
+
+.hero-img::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 20px; 
+  background: rgba(10, 25, 60, 0.25); /* soft dark tint */
+  pointer-events: none;
+}
+
+
+.hero-img img:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); 
+  opacity: 1; /* full opacity on hover for subtle effect */
+    filter: brightness(1) contrast(1); 
+
+}
+
 @media (max-width: 480px) {
   .hero-buttons {
     flex-direction: row;
