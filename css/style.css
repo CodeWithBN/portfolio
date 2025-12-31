@@ -316,44 +316,123 @@ nav a:hover {
   color: var(--text-muted);
   margin: 0;
 }
-
-/* ================= PROJECTS ================= */
+/* Projects */
 .projects-section {
-  background: var(--bg-section-3);
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  background: radial-gradient(circle at top, #0a1f44, #020b1c);
 }
 
 .project-card {
-  background: var(--card-bg);
-  border-radius: 22px;
-  border: 1px solid var(--border-soft);
+  max-width: 420px;
+  border-radius: 20px;
   overflow: hidden;
-  transition: 0.4s;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--glow-soft);
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
 
-.project-card img {
+.project-img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
 }
 
 .project-content {
-  padding: 25px;
+  padding: 22px;
+  color: #fff;
 }
 
-.project-content p {
-  color: var(--text-muted);
+.project-content h5 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.project-content .project-tagline {
+  color: #27d6f9 !important;
   font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+.project-meta {
+  list-style: none;
+  padding: 0;
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+.project-meta li {
+  margin-bottom: 4px;
+}
+
+.project-btn {
+  margin-top: 12px;
+  border-radius: 30px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  color: #fff;
+  border: none;
+}
+
+.project-note {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+/* Custom Carousel Indicators */
+.project-indicators {
+  position: relative;
+  margin-top: 25px;
+}
+/* Adjust carousel controls for smaller screens */
+@media (max-width: 576px) {
+  /* Move arrows slightly inside the carousel */
+  #projectCarousel .carousel-control-prev,
+  #projectCarousel .carousel-control-next {
+    width: 35px; /* smaller touch area */
+    height: 35px; /* reduce default height */
+    top: 50%; /* vertically center */
+    transform: translateY(-50%);
+  }
+
+  #projectCarousel .carousel-control-prev-icon,
+  #projectCarousel .carousel-control-next-icon {
+    background-size: 100% 100%; /* scale down the arrow */
+  }
+
+  /* Optional: reduce indicators size for mobile */
+  #projectCarousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+
+  /* Center carousel content better */
+  #projectCarousel .project-card {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 80%;
+    max-height: 90%;
+  }
+}
+
+.project-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 53%;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 6px;
+  border: none;
+  transition: all 0.3s ease;
 }
 
 /* ================= CONTACT ================= */
@@ -373,6 +452,46 @@ nav a:hover {
   border-radius: 22px;
   padding: 35px;
   backdrop-filter: blur(10px);
+}
+.compact-card {
+  max-width: 380px; /* keeps card from stretching too wide */
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.contact-info i {
+  color: #7dd3fc;
+  min-width: 22px; /* aligns all icons nicely */
+}
+
+.contact-info a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #7dd3fc;
+}
+
+.contact-social a {
+  font-size: 1.4rem;
+  color: #ffffff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contact-social a:hover {
+  color: #7dd3fc;
+  transform: scale(1.2);
 }
 
 .contact-card a {
@@ -641,7 +760,6 @@ body.light {
   width: 45px;
   height: 45px;
   background: var(--card-bg-soft);
-  color: var(--accent);
   border-radius: 50%;
   transition: 0.3s;
   font-size: 1.2rem;
@@ -654,7 +772,60 @@ body.light {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
 }
+/* Footer base style */
+footer.footer {
+  background: rgba(10, 25, 60, 0.95);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
 
+/* Footer links hover */
+footer.footer a {
+  color: #fff;
+  transition: color 0.3s;
+}
+footer.footer a:hover {
+  color: #3b82f6;
+}
+
+/* Social icons - reduced spacing */
+.social-icons-footer {
+  gap: 12px; /* Less space between icons */
+}
+
+.social-icons-footer a {
+  font-size: 1.2rem;
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons-footer a:hover {
+  transform: scale(1.2);
+  color: #3b82f6;
+}
+
+/* Footer headings */
+footer.footer h5 {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Footer info paragraphs */
+footer.footer .footer-info {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer quick links list */
+footer.footer .footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer bottom */
+footer.footer .row.mt-4 p {
+  font-size: 0.85rem;
+  color: #ccc;
+}
 /* Footer Bottom */
 .footer .row.mt-4 p {
   color: var(--text-muted);
