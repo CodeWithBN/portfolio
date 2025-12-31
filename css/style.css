@@ -16,10 +16,7 @@
   --border-soft: rgba(96, 165, 250, 0.25);
   --glow-soft: 0 0 25px rgba(59, 130, 246, 0.15);
 }
-html, body
-{
-  overflow-x: hidden;
-}
+
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
