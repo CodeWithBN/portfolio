@@ -134,6 +134,11 @@ nav a:hover {
   text-decoration: none;
   transition: 0.3s;
 }
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
 
 .btn-primary {
   background: var(--primary);
@@ -172,16 +177,16 @@ nav a:hover {
   transform: translateY(-5px) scale(1.03); /* subtle lift */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* enhanced hover shadow */
 }
-/* Media query for mobile screens */
 @media (max-width: 480px) {
   .hero-buttons {
-    flex-direction: row; /* keep horizontal */
-    gap: 0.5rem; /* reduce gap if screen is small */
+    flex-direction: row;
+    gap: 0.4rem;
   }
 
   .hero-buttons a {
-    font-size: 0.9rem; /* optional: slightly smaller text to fit */
-    padding: 0.6rem 1rem; /* optional: adjust padding */
+    white-space: nowrap; /* 🔴 prevents text from breaking */
+    font-size: 0.85rem; /* 🔴 reduce text size */
+    padding: 0.55rem 0.8rem; /* 🔴 reduce width */
   }
 }
 
@@ -201,6 +206,14 @@ nav a:hover {
   }
   .hero-img {
     margin-top: 30px;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .hero-img img {
+    width: 250px;
+    height: 295px;
   }
 }
 
@@ -437,7 +450,6 @@ body.light {
   border-radius: 50%;
 }
 
-
 /* Optional: hover effect for brand */
 .navbar-brand:hover .brand-text {
   transition: 0.3s;
@@ -452,7 +464,7 @@ body.light {
   .logo {
     height: 35px;
     width: 35px;
-      border-radius: 50%;
+    border-radius: 50%;
   }
 }
 
