@@ -213,7 +213,7 @@ nav a:hover {
 @media (max-width: 768px) {
   .hero-img img {
     width: 250px;
-    height: 375px;
+    height: 305px;
   }
 }
 
@@ -345,6 +345,35 @@ nav a:hover {
   border-radius: 20px;
   overflow: hidden;
 }
+
+@media (max-width: 767px) {
+  .project-card {
+    max-height: 420px; 
+      max-width: 300px;
+    overflow: hidden;   /* ensures content doesn't break the card */
+  }
+
+  .project-card .project-img {
+    max-height: 150px; /* reduce image height for small screens */
+    object-fit: cover; /* maintain aspect ratio without distortion */
+  }
+
+  .project-card .project-content {
+    padding: 10px; /* reduce padding for smaller screens */
+  }
+
+  .project-card .project-desc,
+  .project-card .project-meta,
+  .project-card .project-note {
+    font-size: 0.85rem; /* slightly smaller text */
+  }
+
+  .project-card .project-btn {
+    padding: 5px 10px; /* smaller button for mobile */
+    font-size: 0.8rem;
+  }
+}
+
 
 .glass {
   background: rgba(255, 255, 255, 0.08);
@@ -518,8 +547,33 @@ nav a:hover {
   text-decoration: none;
 }
 
+@media (min-width: 768px) {
+  .contact-card {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* ensures margin auto works */
+    width: 100;
+  }
+}
+@media (min-width: 480px) {
+  .contact-card {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* ensures margin auto works */
+    width: 80%;
+  }
+}
+
 /* Media query for mobile screens */
 @media (max-width: 480px) {
+  .send {
+    display: block; /* makes it a block element */
+    margin: 1rem auto; /* centers horizontally, adds vertical spacing */
+    width: fit-content; /* optional: button width fits its content */
+    padding: 0.6rem 1.2rem;
+  }
+}
+@media (min-width: 480px) {
   .send {
     display: block; /* makes it a block element */
     margin: 1rem auto; /* centers horizontally, adds vertical spacing */
