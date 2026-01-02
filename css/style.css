@@ -164,15 +164,16 @@ nav a:hover {
 }
 
 .hero-img img {
-  width: 390px; 
-  height: 470px; 
-  border-radius: 20px; 
-  object-fit: cover; 
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); 
-  border: 2px solid var(--accent); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  width: 390px;
+  height: 470px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease,
+    opacity 0.3s ease;
 
-  filter: brightness(0.85) contrast(1.05); 
+  filter: brightness(0.85) contrast(1.05);
 }
 
 .hero-img {
@@ -182,18 +183,19 @@ nav a:hover {
 .hero-img::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  border-radius: 20px; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
   background: rgba(10, 25, 60, 0.25); /* soft dark tint */
   pointer-events: none;
 }
 
-
 .hero-img img:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
   opacity: 1; /* full opacity on hover for subtle effect */
-    filter: brightness(1) contrast(1); 
-
+  filter: brightness(1) contrast(1);
 }
 
 @media (max-width: 480px) {
@@ -346,11 +348,11 @@ nav a:hover {
   overflow: hidden;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .project-card {
-    max-height: 420px; 
-      max-width: 300px;
-    overflow: hidden;   /* ensures content doesn't break the card */
+    max-height: 380px !important;
+    max-width: 300px;
+    overflow: hidden; /* ensures content doesn't break the card */
   }
 
   .project-card .project-img {
@@ -365,15 +367,14 @@ nav a:hover {
   .project-card .project-desc,
   .project-card .project-meta,
   .project-card .project-note {
-    font-size: 0.85rem; /* slightly smaller text */
+    font-size: 0.65rem; /* slightly smaller text */
   }
 
   .project-card .project-btn {
     padding: 5px 10px; /* smaller button for mobile */
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
-
 
 .glass {
   background: rgba(255, 255, 255, 0.08);
