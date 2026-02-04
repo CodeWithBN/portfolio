@@ -144,7 +144,7 @@ nav a:hover {
   background: var(--primary);
   color: #fff;
 }
-.btn-outline {
+.btn-outline-primary {
   border: 1px solid var(--border-soft);
   color: var(--text-main);
 }
