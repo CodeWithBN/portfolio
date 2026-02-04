@@ -150,6 +150,7 @@ nav a:hover {
 }
 
 .hero-buttons a:hover {
+  transform: translateY(-4px);
   box-shadow: var(--glow-soft);
 }
 
@@ -169,10 +170,7 @@ nav a:hover {
   object-fit: cover;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   border: 2px solid var(--accent);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    filter 0.3s ease,
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease,
     opacity 0.3s ease;
 
   filter: brightness(0.85) contrast(1.05);
@@ -238,102 +236,6 @@ nav a:hover {
     width: 250px;
     height: 295px;
   }
-}
-/* HERO BUTTONS */
-.hero-buttons {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
-
-/* PRIMARY BUTTON */
-.btn-primary {
-  background: #2563eb;
-  color: #fff;
-  padding: 11px 24px;
-  border-radius: 6px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
-
-.btn-primary:hover {
-  background: #1e4fd8;
-}
-
-/* OUTLINE BUTTON */
-.btn-outline {
-  background: transparent;
-  color: #2563eb;
-  border: 1.5px solid #2563eb;
-  padding: 11px 22px;
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.btn-outline.xyz {
-  padding: 12px 26px;
-  border-radius: 30px;
-}
-
-.btn-outline:hover {
-  background: rgba(37, 99, 235, 0.08);
-}
-
-.btn-outline:active {
-  background: rgba(37, 99, 235, 0.15);
-}
-
-/* MODAL OVERLAY */
-.cv-preview {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  display: none;
-  z-index: 1000;
-}
-
-/* MODAL BOX */
-.cv-box {
-  background: #fff;
-  width: 55%;
-  margin: 5% auto;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-/* MODAL HEADER */
-.cv-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 18px;
-  border-bottom: 1px solid #eee;
-  font-weight: 500;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* PREVIEW */
-.cv-box iframe {
-  width: 100%;
-  height: 420px;
-  border: none;
-}
-
-/* ACTIONS */
-.cv-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  padding: 14px 18px;
-  border-top: 1px solid #eee;
 }
 
 /* ================= ABOUT ================= */
@@ -633,9 +535,7 @@ nav a:hover {
 .contact-social a {
   font-size: 1.4rem;
   color: #ffffff;
-  transition:
-    transform 0.3s,
-    color 0.3s;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .contact-social a:hover {
@@ -970,9 +870,7 @@ footer.footer a:hover {
 .social-icons-footer a {
   font-size: 1.2rem;
   color: #fff;
-  transition:
-    transform 0.3s,
-    color 0.3s;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons-footer a:hover {
