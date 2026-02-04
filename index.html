@@ -130,32 +130,28 @@
           </p>
           <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
             <a href="#projects" class="btn-primary">View Projects</a>
-            <button class="btn btn-outline-primary" onclick="toggleCV(true)">
+            <button class="btn-outline xyz" onclick="toggleCV(true)">
               Preview CV
             </button>
           </div>
+        </div>
+        <div id="cvPreview" class="cv-preview">
+          <div class="cv-box">
+            <div class="cv-header">
+              <span>CV Preview</span>
+              <button class="close-btn" onclick="toggleCV(false)">×</button>
+            </div>
 
-          <!-- CV Preview Modal -->
-          <div id="cvPreview" class="cv-preview">
-            <div class="cv-box">
-              <div class="cv-header">
-                <span>Curriculum Vitae</span>
-                <button onclick="toggleCV(false)">✕</button>
-              </div>
+            <iframe src="CV.pdf" title="CV Preview"></iframe>
 
-              <iframe src="CV.pdf"></iframe>
-
-              <div class="cv-actions">
-                <button class="btn-outline" onclick="toggleCV(false)">
-                  Cancel
-                </button>
-                  <button class="btn-outline">
-                <a href="CV.pdf"style="text-decoration:none" download class="btn-primary">Download</a></button>
-              </div>
+            <div class="cv-actions">
+              <button class="btn-outline" onclick="toggleCV(false)">
+                Cancel
+              </button>
+              <a href="CV.pdf" download class="btn-primary">Download CV</a>
             </div>
           </div>
         </div>
-
         <!-- RIGHT IMAGE -->
         <div class="hero-img" data-aos="fade-left" data-aos-delay="500">
           <img src="img/bushra.jpg" alt="Bushra Nazar" />
