@@ -915,3 +915,53 @@ footer.footer .row.mt-4 p {
     justify-content: center !important;
   }
 }
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--primary-color);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+}
+
+.hero-tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+
+    margin:30px 0;
+}
+
+.hero-tech-stack span{
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:#fff;
+
+    border:1px solid rgba(0,0,0,.08);
+
+    font-size:.88rem;
+
+    font-weight:600;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.hero-tech-stack span:hover{
+    transform:translateY(-3px);
+}
